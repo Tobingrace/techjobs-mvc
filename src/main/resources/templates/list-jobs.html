@@ -12,6 +12,12 @@
 
     <!-- TODO #3 - Use the same list display from search.html -->
 
+    <!--Using fragments as it felt the best due to work with Blocks in Python/Jinja2-->
+    <!--If there was results run through and generate the html per results and add it to the view-->
+    <div th:if="${jobs}">
+        <div th:replace="fragments :: results"></div>
+    </div>
+
 </div>
 
 </body>

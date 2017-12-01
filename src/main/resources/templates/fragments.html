@@ -27,5 +27,24 @@
         </div>
     </div>
 
+    <div th:fragment="results">
+        <!--Display number of jobs found-->
+        <h2 th:text="'Found ' + ${jobs.size()} + ' matching jobs'"></h2>
+
+        <!--Iterate through jobs, used job-listing from techjobs.css-->
+        <table class="job-listing" th:each="job : ${jobs}">
+
+            <!--Grabbing looping through by each key-->
+            <tr th:each="key : ${job.keySet()}">
+
+                <!--Displaying key-->
+                <td th:text="${#strings.capitalizeWords(key)}"></td>
+
+                <!--Displaying value-->
+                <td th:text="${job.get(key)}"></td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>

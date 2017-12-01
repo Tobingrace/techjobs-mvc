@@ -27,3 +27,9 @@ table.job-listing td:last-child {
 label {
     margin-right: 15px;
 }
+
+.resultfield {
+    height: 35%;
+    max-height: 35%;
+    overflow: scroll;
+}
